@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   import "../app.postcss"
+  import { BountyHunter } from "$icons"
 </script>
 
 <div class="min-h-full">
@@ -8,40 +9,29 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <img
-              class="h-8 w-8"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Your Company"
-            />
+            <div class="h-8 w-8 fill-indigo-500">
+              <BountyHunter />
+            </div>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#"
+              <div
                 class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page">Home</a
+                aria-current="page"
               >
-              <a
-                href="#"
+                Experience
+              </div>
+              <div
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Team</a
               >
-              <a
-                href="#"
+                Skills
+              </div>
+              <div
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Projects</a
               >
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Calendar</a
-              >
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >Reports</a
-              >
+                Projects
+              </div>
             </div>
           </div>
         </div>
@@ -93,31 +83,22 @@
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
+        <div
           class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-          aria-current="page">Home</a
+          aria-current="page"
         >
-        <a
-          href="#"
+          Experience
+        </div>
+        <div
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Team</a
         >
-        <a
-          href="#"
+          Skills
+        </div>
+        <div
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Projects</a
         >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Calendar</a
-        >
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >Reports</a
-        >
+          Projects
+        </div>
       </div>
     </div>
   </nav>
@@ -149,6 +130,7 @@
                   <h1 class="truncate text-2xl font-bold text-gray-900">
                     Eisen Montalvo Ruiz
                   </h1>
+                  <h2>Principal Computer Engineer</h2>
                 </div>
               </div>
             </div>
@@ -156,6 +138,7 @@
               <h1 class="truncate text-2xl font-bold text-gray-900">
                 Eisen Montalvo Ruiz
               </h1>
+              <h2>Principal Computer Engineer</h2>
             </div>
           </div>
         </div>
