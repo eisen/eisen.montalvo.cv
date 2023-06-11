@@ -1,6 +1,19 @@
 <script lang="ts">
   import "../app.postcss"
+  import { page } from "$app/stores"
   import { BountyHunter } from "$icons"
+
+  const defaultStyle =
+    "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+  const selectedStyle =
+    "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+
+  $: experienceStyle =
+    $page.url.pathname == "/experience" ? selectedStyle : defaultStyle
+  $: skillsStyle =
+    $page.url.pathname == "/skills" ? selectedStyle : defaultStyle
+  $: projectsStyle =
+    $page.url.pathname == "/projects" ? selectedStyle : defaultStyle
 </script>
 
 <div class="min-h-full">
@@ -16,22 +29,11 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <div
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                aria-current="page"
-              >
+              <a href="experience" class={experienceStyle} aria-current="page">
                 Experience
-              </div>
-              <div
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-              >
-                Skills
-              </div>
-              <div
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-              >
-                Projects
-              </div>
+              </a>
+              <a href="skills" class={skillsStyle}> Skills </a>
+              <a href="projects" class={projectsStyle}> Projects </a>
             </div>
           </div>
         </div>
@@ -83,22 +85,11 @@
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <div
-          class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-          aria-current="page"
-        >
+        <a href="experience" class={experienceStyle} aria-current="page">
           Experience
-        </div>
-        <div
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >
-          Skills
-        </div>
-        <div
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >
-          Projects
-        </div>
+        </a>
+        <a href="skills" class={skillsStyle}> Skills </a>
+        <a href="projects" class={projectsStyle}> Projects </a>
       </div>
     </div>
   </nav>
