@@ -1,7 +1,7 @@
 <script lang="ts">
   import "../app.postcss"
   import { page } from "$app/stores"
-  import { BountyHunter } from "$icons"
+  import { BountyHunter, Email } from "$icons"
 
   const defaultStyle =
     "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -10,6 +10,8 @@
 
   $: experienceStyle =
     $page.url.pathname == "/experience" ? selectedStyle : defaultStyle
+  $: educationStyle =
+    $page.url.pathname == "/education" ? selectedStyle : defaultStyle
   $: skillsStyle =
     $page.url.pathname == "/skills" ? selectedStyle : defaultStyle
   $: projectsStyle =
@@ -22,7 +24,7 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <div class="h-8 w-8 fill-indigo-500">
+            <div class="h-8 w-8 fill-white">
               <BountyHunter />
             </div>
           </div>
@@ -32,6 +34,7 @@
               <a href="experience" class={experienceStyle} aria-current="page">
                 Experience
               </a>
+              <a href="education" class={educationStyle}> Education </a>
               <a href="skills" class={skillsStyle}> Skills </a>
               <a href="projects" class={projectsStyle}> Projects </a>
             </div>
@@ -88,7 +91,8 @@
         <a href="experience" class={experienceStyle} aria-current="page">
           Experience
         </a>
-        <a href="skills" class={skillsStyle}> Skills </a>
+        <a href="skills" class={educationStyle}> educationStyle </a>
+        <a href="education" class={skillsStyle}> Skills </a>
         <a href="projects" class={projectsStyle}> Projects </a>
       </div>
     </div>
@@ -119,15 +123,23 @@
               >
                 <div class="mt-6 min-w-0 flex-1 sm:hidden md:block">
                   <h1 class="truncate text-2xl font-bold text-gray-900">
-                    Eisen Montalvo Ruiz
+                    Eisen Montalvo
                   </h1>
                   <h2>Principal Computer Engineer</h2>
+                </div>
+                <div class="flex">
+                  <div class="h-8 w-8 fill-indigo-500 mr-0">
+                    <Email />
+                  </div>
+                  <div class="ml-3 relative top-1">
+                    contact@eisen.montalvo.cv
+                  </div>
                 </div>
               </div>
             </div>
             <div class="mt-6 hidden min-w-0 flex-1 sm:block md:hidden">
               <h1 class="truncate text-2xl font-bold text-gray-900">
-                Eisen Montalvo Ruiz
+                Eisen Montalvo
               </h1>
               <h2>Principal Computer Engineer</h2>
             </div>
@@ -138,4 +150,6 @@
   </header>
 </div>
 
-<slot />
+<div class="px-4 py-5 sm:p-6">
+  <slot />
+</div>
