@@ -1,7 +1,7 @@
 <script lang="ts">
   import "../app.postcss"
   import { page } from "$app/stores"
-  import { BountyHunter, Email } from "$icons"
+  import { ComplexCode, Email } from "$icons"
 
   const defaultStyle =
     "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -12,10 +12,10 @@
     $page.url.pathname == "/experience" ? selectedStyle : defaultStyle
   $: educationStyle =
     $page.url.pathname == "/education" ? selectedStyle : defaultStyle
-  $: skillsStyle =
-    $page.url.pathname == "/skills" ? selectedStyle : defaultStyle
-  $: projectsStyle =
-    $page.url.pathname == "/projects" ? selectedStyle : defaultStyle
+  // $: skillsStyle =
+  //   $page.url.pathname == "/skills" ? selectedStyle : defaultStyle
+  // $: projectsStyle =
+  //   $page.url.pathname == "/projects" ? selectedStyle : defaultStyle
 </script>
 
 <div class="min-h-full">
@@ -24,9 +24,11 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <div class="h-8 w-8 fill-white">
-              <BountyHunter />
-            </div>
+            <a href="/">
+              <div class="h-8 w-8 fill-white">
+                <ComplexCode />
+              </div>
+            </a>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
@@ -35,8 +37,8 @@
                 Experience
               </a>
               <a href="education" class={educationStyle}> Education </a>
-              <a href="skills" class={skillsStyle}> Skills </a>
-              <a href="projects" class={projectsStyle}> Projects </a>
+              <!-- <a href="skills" class={skillsStyle}> Skills </a>
+              <a href="projects" class={projectsStyle}> Projects </a> -->
             </div>
           </div>
         </div>
@@ -92,8 +94,8 @@
           Experience
         </a>
         <a href="skills" class={educationStyle}> educationStyle </a>
-        <a href="education" class={skillsStyle}> Skills </a>
-        <a href="projects" class={projectsStyle}> Projects </a>
+        <!-- <a href="education" class={skillsStyle}> Skills </a>
+        <a href="projects" class={projectsStyle}> Projects </a> -->
       </div>
     </div>
   </nav>
@@ -127,7 +129,7 @@
                   </h1>
                   <h2>Principal Computer Engineer</h2>
                 </div>
-                <div class="flex">
+                <div class="flex mt-6">
                   <div class="h-8 w-8 fill-indigo-500 mr-0">
                     <Email />
                   </div>
@@ -150,6 +152,6 @@
   </header>
 </div>
 
-<div class="px-4 py-5 sm:p-6">
+<div class="px-4 py-5 sm:p-6 max-w-7xl mx-auto">
   <slot />
 </div>

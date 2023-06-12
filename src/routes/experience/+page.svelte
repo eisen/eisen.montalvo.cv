@@ -1,7 +1,4 @@
-<ul
-  role="list"
-  class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
->
+<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
   <li
     class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
   >
@@ -82,7 +79,7 @@
   >
     <div class="flex flex-1 flex-col p-8">
       <img
-        class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+        class="mx-auto h-32 w-32 flex-shrink-0"
         src="media/rtn.jpeg"
         alt=""
       />
