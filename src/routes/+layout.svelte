@@ -9,13 +9,18 @@
     "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
 
   $: experienceStyle =
-    $page.url.pathname == "/experience" ? selectedStyle : defaultStyle
+    $page.url.pathname == "/experience/" ? selectedStyle : defaultStyle
   $: educationStyle =
-    $page.url.pathname == "/education" ? selectedStyle : defaultStyle
-  // $: skillsStyle =
-  //   $page.url.pathname == "/skills" ? selectedStyle : defaultStyle
-  // $: projectsStyle =
-  //   $page.url.pathname == "/projects" ? selectedStyle : defaultStyle
+    $page.url.pathname == "/education/" ? selectedStyle : defaultStyle
+  $: skillsStyle =
+    $page.url.pathname == "/skills/" ? selectedStyle : defaultStyle
+  $: projectsStyle =
+    $page.url.pathname == "/projects/" ? selectedStyle : defaultStyle
+
+  $: show = false
+
+  const ToggleMenu = () => (show = !show)
+  const HideMenu = () => (show = false)
 </script>
 
 <div class="min-h-full">
@@ -24,7 +29,7 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <a href="/">
+            <a href="/" on:click={HideMenu}>
               <div class="h-8 w-8 fill-white">
                 <ComplexCode />
               </div>
@@ -33,12 +38,12 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="experience" class={experienceStyle} aria-current="page">
+              <a href="/experience" class={experienceStyle} aria-current="page">
                 Experience
               </a>
-              <a href="education" class={educationStyle}> Education </a>
-              <!-- <a href="skills" class={skillsStyle}> Skills </a>
-              <a href="projects" class={projectsStyle}> Projects </a> -->
+              <a href="/education" class={educationStyle}> Education </a>
+              <!-- <a href="/skills" class={skillsStyle}> Skills </a>
+              <a href="/projects" class={projectsStyle}> Projects </a> -->
             </div>
           </div>
         </div>
@@ -49,11 +54,14 @@
             class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             aria-controls="mobile-menu"
             aria-expanded="false"
+            on:click={ToggleMenu}
           >
             <span class="sr-only">Open main menu</span>
             <!-- Menu open: "hidden", Menu closed: "block" -->
             <svg
-              class="block h-6 w-6"
+              class:block={!show}
+              class:hidden={show}
+              class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
@@ -68,7 +76,9 @@
             </svg>
             <!-- Menu open: "block", Menu closed: "hidden" -->
             <svg
-              class="hidden h-6 w-6"
+              class:block={show}
+              class:hidden={!show}
+              class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
@@ -87,16 +97,26 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="experience" class={experienceStyle} aria-current="page">
-          Experience
-        </a>
-        <a href="skills" class={educationStyle}> educationStyle </a>
-        <!-- <a href="education" class={skillsStyle}> Skills </a>
-        <a href="projects" class={projectsStyle}> Projects </a> -->
-      </div>
+    <div class="md:hidden absolute left-0 right-0 bg-gray-800" id="mobile-menu">
+      {#if show}
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="/experience"
+            class={experienceStyle}
+            aria-current="page"
+            on:click={HideMenu}
+          >
+            Experience
+          </a>
+          <a href="/education" class={educationStyle} on:click={HideMenu}>
+            Education
+          </a>
+          <!--<a href="/skills" class={educationStyle}> educationStyle </a>
+        
+        <a href="/projects" class={projectsStyle}> Projects </a> -->
+        </div>
+      {/if}
     </div>
   </nav>
 
@@ -107,7 +127,7 @@
           <div>
             <img
               class="h-32 w-full object-cover lg:h-48"
-              src="media/banner.jpeg"
+              src="/media/banner.jpeg"
               alt=""
             />
           </div>
@@ -116,7 +136,7 @@
               <div class="flex">
                 <img
                   class="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
-                  src="media/profile.png"
+                  src="/media/profile.png"
                   alt=""
                 />
               </div>

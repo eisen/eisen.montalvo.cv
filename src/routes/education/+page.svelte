@@ -1,7 +1,7 @@
 <ul class="space-y-3">
   <li class="overflow-hidden bg-white px-4 py-4 shadow sm:rounded-md sm:px-6">
     <div class="flex flex-1 flex-row p-8 justify-start">
-      <img class="mr-6 h-32 w-32 flex-shrink-0" src="media/uofu.jpeg" alt="" />
+      <img class="mr-6 h-32 w-32 flex-shrink-0" src="/media/uofu.jpeg" alt="" />
       <div class="flex flex-col">
         <h3 class="mt-6 text-sm font-medium text-gray-900">
           University of Utah
@@ -25,7 +25,7 @@
     <div class="flex flex-1 flex-row p-8 justify-start">
       <img
         class="mr-6 h-32 w-32 flex-shrink-0 rounded-full"
-        src="media/uprm.jpeg"
+        src="/media/uprm.jpeg"
         alt=""
       />
       <div class="flex flex-col">

@@ -5,7 +5,7 @@
     <div class="flex flex-1 flex-col p-8">
       <img
         class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-        src="media/rtx.jpeg"
+        src="/media/rtx.jpeg"
         alt=""
       />
       <h3 class="mt-6 text-sm font-medium text-gray-900">
@@ -30,7 +30,7 @@
     <div class="flex flex-1 flex-col p-8">
       <img
         class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-        src="media/snhu.jpeg"
+        src="/media/snhu.jpeg"
         alt=""
       />
       <h3 class="mt-6 text-sm font-medium text-gray-900">
@@ -55,7 +55,7 @@
     <div class="flex flex-1 flex-col p-8">
       <img
         class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-        src="media/unident.jpeg"
+        src="/media/unident.jpeg"
         alt=""
       />
       <h3 class="mt-6 text-sm font-medium text-gray-900">
@@ -80,7 +80,7 @@
     <div class="flex flex-1 flex-col p-8">
       <img
         class="mx-auto h-32 w-32 flex-shrink-0"
-        src="media/rtn.jpeg"
+        src="/media/rtn.jpeg"
         alt=""
       />
       <h3 class="mt-6 text-sm font-medium text-gray-900">Raytheon</h3>
