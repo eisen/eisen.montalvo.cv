@@ -16,6 +16,8 @@
     $page.url.pathname == "/skills/" ? selectedStyle : defaultStyle
   $: projectsStyle =
     $page.url.pathname == "/projects/" ? selectedStyle : defaultStyle
+  $: researchStyle =
+    $page.url.pathname == "/research/" ? selectedStyle : defaultStyle
 
   $: show = false
 
@@ -42,6 +44,7 @@
                 Experience
               </a>
               <a href="/education" class={educationStyle}> Education </a>
+              <a href="/research" class={researchStyle}> Research </a>
               <!-- <a href="/skills" class={skillsStyle}> Skills </a>
               <a href="/projects" class={projectsStyle}> Projects </a> -->
             </div>
@@ -111,6 +114,9 @@
           </a>
           <a href="/education" class={educationStyle} on:click={HideMenu}>
             Education
+          </a>
+          <a href="/research" class={researchStyle} on:click={HideMenu}>
+            Research
           </a>
           <!--<a href="/skills" class={educationStyle}> educationStyle </a>
         
