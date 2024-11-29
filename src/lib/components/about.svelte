@@ -5,6 +5,7 @@
 <template>
   <div class="px-4 py-6 sm:px-6">
     <h3 class="text-base font-semibold leading-7 text-gray-900">About me</h3>
+    <hr />
     <div class="columns-1 md:columns-2">
       <p class={pStyle}>
         Passionate about merging the worlds of technology and creativity, I am a

@@ -3,9 +3,10 @@
 
 <template>
   <div class="px-4 py-6 sm:px-6">
-    <h3 class="text-base font-semibold leading-7 text-gray-900">
+    <h2 class="text-base font-semibold leading-7 text-gray-900">
       Employment Experience
-    </h3>
+    </h2>
+    <hr class="mb-2" />
     <ul
       class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >

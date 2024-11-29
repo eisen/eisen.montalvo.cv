@@ -3,7 +3,8 @@
 
 <template>
   <div class="px-4 py-6 sm:px-6">
-    <h3 class="text-base font-semibold leading-7 text-gray-900">Education</h3>
+    <h2 class="text-base font-semibold leading-7 text-gray-900">Education</h2>
+    <hr class="mb-2" />
     <ul class="space-y-3">
       <li
         class="overflow-hidden bg-white px-4 py-4 shadow sm:rounded-md sm:px-6"
@@ -21,6 +22,10 @@
             <dl class="mt-1 flex flex-grow flex-col justify-between">
               <dt class="sr-only">Title</dt>
               <dd class="text-sm text-gray-500">PhD of Science in Computing</dd>
+              <dt class="sr-only">Specialization</dt>
+              <dd class="text-sm text-gray-500">
+                Computer Graphics and Visualization Track
+              </dd>
               <dt class="sr-only">Role</dt>
               <dd class="mt-3">
                 <span
@@ -50,6 +55,10 @@
               <dt class="sr-only">Title</dt>
               <dd class="text-sm text-gray-500">
                 Masters of Science in Computing
+              </dd>
+              <dt class="sr-only">Specialization</dt>
+              <dd class="text-sm text-gray-500">
+                Computer Graphics and Visualization Track
               </dd>
               <dt class="sr-only">Role</dt>
               <dd class="mt-3">
@@ -81,6 +90,8 @@
               <dd class="text-sm text-gray-500">
                 Bachelor of Science in Computer Engineering
               </dd>
+              <dt class="sr-only">Specialization</dt>
+              <dd class="text-sm text-gray-500">Magna Cum Laude</dd>
               <dt class="sr-only">Role</dt>
               <dd class="mt-3">
                 <span
