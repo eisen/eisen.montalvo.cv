@@ -1,23 +1,9 @@
 <script lang="ts">
   import "../app.postcss"
-  import { page } from "$app/stores"
   import { ComplexCode, Email } from "$icons"
 
   const defaultStyle =
     "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-  const selectedStyle =
-    "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-
-  $: experienceStyle =
-    $page.url.pathname == "/experience/" ? selectedStyle : defaultStyle
-  $: educationStyle =
-    $page.url.pathname == "/education/" ? selectedStyle : defaultStyle
-  $: skillsStyle =
-    $page.url.pathname == "/skills/" ? selectedStyle : defaultStyle
-  $: projectsStyle =
-    $page.url.pathname == "/projects/" ? selectedStyle : defaultStyle
-  $: researchStyle =
-    $page.url.pathname == "/research/" ? selectedStyle : defaultStyle
 
   $: show = false
 
@@ -40,13 +26,12 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/experience" class={experienceStyle} aria-current="page">
-                Experience
-              </a>
-              <a href="/education" class={educationStyle}> Education </a>
-              <a href="/research" class={researchStyle}> Research </a>
-              <!-- <a href="/skills" class={skillsStyle}> Skills </a>
-              <a href="/projects" class={projectsStyle}> Projects </a> -->
+              <a href="#education" class={defaultStyle}> Education </a>
+              <a href="#employment" class={defaultStyle}> Employment </a>
+              <a href="#teaching" class={defaultStyle}> Teaching </a>
+              <a href="#publications" class={defaultStyle}> Publications </a>
+              <a href="#affiliations" class={defaultStyle}> Affiliations </a>
+              <a href="#languages" class={defaultStyle}> Languages </a>
             </div>
           </div>
         </div>
@@ -104,23 +89,12 @@
       {#if show}
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a
-            href="/experience"
-            class={experienceStyle}
-            aria-current="page"
-            on:click={HideMenu}
-          >
-            Experience
-          </a>
-          <a href="/education" class={educationStyle} on:click={HideMenu}>
-            Education
-          </a>
-          <a href="/research" class={researchStyle} on:click={HideMenu}>
-            Research
-          </a>
-          <!--<a href="/skills" class={educationStyle}> educationStyle </a>
-        
-        <a href="/projects" class={projectsStyle}> Projects </a> -->
+          <a href="#education" class={defaultStyle}> Education </a>
+          <a href="#employment" class={defaultStyle}> Employment </a>
+          <a href="#teaching" class={defaultStyle}> Teaching </a>
+          <a href="#publications" class={defaultStyle}> Publications </a>
+          <a href="#affiliations" class={defaultStyle}> Affiliations </a>
+          <a href="#languages" class={defaultStyle}> Languages </a>
         </div>
       {/if}
     </div>

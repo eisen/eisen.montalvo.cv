@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="px-4 py-6 sm:px-6">
+  <div id="teaching" class="px-4 py-6 sm:px-6">
     <h3 class="text-base font-semibold leading-7 text-gray-900">
       Teaching Experience
     </h3>
@@ -16,11 +16,11 @@
         <div class="flex flex-1 flex-col p-8">
           <img
             class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-            src="/media/snhu.jpeg"
+            src="/media/snhu.png"
             alt=""
           />
           <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Southern New Hampshite University
+            Southern New Hampshire University
           </h3>
           <dl class="mt-1 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="vectorflags.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed0000;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #0050f0;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-3" cx="300" cy="300" r="300"/>
+    </clipPath>
+  </defs>
+  <g class="cls-5">
+    <g>
+      <g>
+        <polygon class="cls-1" points="0 0 0 120 900 120 900 240 0 240 0 360 900 360 900 480 0 480 0 600 900 600 900 0 0 0"/>
+        <rect class="cls-2" y="120" width="0" height="120"/>
+        <rect class="cls-2" y="360" width="0" height="120"/>
+        <rect class="cls-2" x="0" y="120" width="900" height="120"/>
+        <rect class="cls-2" x="0" y="360" width="900" height="120"/>
+      </g>
+      <path class="cls-4" d="M0,0l519.62,300L0,600V0Z"/>
+      <polygon class="cls-2" points="268.31 269.1 195.66 269.1 173.21 200 150.75 269.1 78.1 269.1 136.88 311.8 114.43 380.9 173.21 338.2 231.98 380.9 209.53 311.8 268.31 269.1"/>
+    </g>
+  </g>
+</svg>
